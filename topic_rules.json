@@ -1,0 +1,236 @@
+{
+  "coursera": [
+    "course",
+    "learning",
+    "online-education"
+  ],
+  "udacity": [
+    "nanodegree",
+    "learning",
+    "online-course"
+  ],
+  "datacamp": [
+    "course",
+    "python",
+    "data-science"
+  ],
+  "ipnd": [
+    "intro-to-programming",
+    "html",
+    "learning"
+  ],
+  "oms": [
+    "oms",
+    "graduate-program",
+    "georgia-tech"
+  ],
+  "datasci": [
+    "data-science",
+    "machine-learning",
+    "python"
+  ],
+  "pandas": [
+    "data-manipulation",
+    "dataframe",
+    "pandas"
+  ],
+  "scikit": [
+    "machine-learning",
+    "scikit-learn",
+    "ml"
+  ],
+  "kaggle": [
+    "datasets",
+    "competitions",
+    "kaggle"
+  ],
+  "jupyter": [
+    "jupyter-notebook",
+    "exploratory-data-analysis",
+    "python"
+  ],
+  "notebook": [
+    "notebooks",
+    "python",
+    "analysis"
+  ],
+  "honeypot": [
+    "honeypot",
+    "cybersecurity",
+    "network-security"
+  ],
+  "malware": [
+    "malware-analysis",
+    "reverse-engineering",
+    "security"
+  ],
+  "csci4349": [
+    "cybersecurity",
+    "network",
+    "college-project"
+  ],
+  "ctf": [
+    "capture-the-flag",
+    "ctf-challenges",
+    "infosec"
+  ],
+  "threat": [
+    "threat-detection",
+    "threat-intelligence",
+    "blue-team"
+  ],
+  "html": [
+    "html",
+    "webdev",
+    "frontend"
+  ],
+  "flask": [
+    "flask",
+    "webapp",
+    "python"
+  ],
+  "css": [
+    "css",
+    "styling",
+    "frontend"
+  ],
+  "vagrant": [
+    "vagrant",
+    "devops",
+    "virtualization"
+  ],
+  "bootstrap": [
+    "bootstrap",
+    "ui",
+    "web-design"
+  ],
+  "script": [
+    "automation",
+    "scripts",
+    "cli-tools"
+  ],
+  "scraper": [
+    "scraping",
+    "automation",
+    "requests"
+  ],
+  "fasclass": [
+    "scraper",
+    "us-government",
+    "automation"
+  ],
+  "anki": [
+    "anki",
+    "flashcards",
+    "spaced-repetition",
+    "study"
+  ],
+  "calculus": [
+    "anki",
+    "calculus",
+    "math"
+  ],
+  "linear": [
+    "linear-algebra",
+    "math",
+    "anki"
+  ],
+  "algorithm": [
+    "algorithms",
+    "complexity",
+    "cs-theory"
+  ],
+  "open-source": [
+    "open-source",
+    "education",
+    "free-courses"
+  ],
+  "degree": [
+    "curriculum",
+    "education",
+    "structured-learning"
+  ],
+  "cybersecurity-degree": [
+    "cybersecurity",
+    "education",
+    "career-path"
+  ],
+  "data-science-degree": [
+    "data-science",
+    "education",
+    "open-source"
+  ],
+  "dod": [
+    "dod",
+    "defense",
+    "us-government"
+  ],
+  "army": [
+    "army",
+    "us-government",
+    "public-sector"
+  ],
+  "omscs": [
+    "omscs",
+    "georgia-tech",
+    "online-master",
+    "cs-education"
+  ],
+  "cs6603": [
+    "omscs",
+    "georgia-tech",
+    "ethics",
+    "ai",
+    "cs6603"
+  ],
+  "cs7637": [
+    "omscs",
+    "georgia-tech",
+    "ai",
+    "knowledge-based-ai",
+    "cs7637"
+  ],
+  "cs7641": [
+    "omscs",
+    "georgia-tech",
+    "machine-learning",
+    "cs7641"
+  ],
+  "cs7646": [
+    "omscs",
+    "georgia-tech",
+    "quantitative-investing",
+    "ml4t",
+    "cs7646"
+  ],
+  "cs6250": [
+    "omscs",
+    "georgia-tech",
+    "computer-networks",
+    "cs6250"
+  ],
+  "cs8803": [
+    "omscs",
+    "georgia-tech",
+    "special-topics",
+    "cs8803"
+  ],
+  "cs6200": [
+    "omscs",
+    "georgia-tech",
+    "information-retrieval",
+    "cs6200"
+  ],
+  "cs6475": [
+    "omscs",
+    "georgia-tech",
+    "computational-photography",
+    "cs6475"
+  ],
+  "cs6035": [
+    "omscs",
+    "georgia-tech",
+    "cybersecurity",
+    "cs6035"
+  ]
+}
