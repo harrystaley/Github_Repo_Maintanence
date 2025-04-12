@@ -1,236 +1,492 @@
 {
+  "accessibility": [
+    "accessibility"
+  ],
+  "ai": [
+    "ai"
+  ],
+  "algorithms": [
+    "algorithms"
+  ],
+  "anki": [
+    "anki"
+  ],
+  "ansible": [
+    "ansible"
+  ],
+  "api": [
+    "api"
+  ],
+  "automation": [
+    "automate",
+    "automation",
+    "script",
+    "task"
+  ],
+  "aws": [
+    "aws"
+  ],
+  "azure": [
+    "azure"
+  ],
+  "backend": [
+    "backend"
+  ],
+  "bash": [
+    "bash"
+  ],
+  "blog": [
+    "blog"
+  ],
+  "blue-team": [
+    "blue",
+    "blue-team",
+    "team"
+  ],
+  "bootcamp": [
+    "bootcamp"
+  ],
+  "c": [
+    "c"
+  ],
+  "c++": [
+    "c++"
+  ],
+  "calculus": [
+    "calculus"
+  ],
+  "capstone": [
+    "capstone"
+  ],
+  "certificate": [
+    "certificate"
+  ],
+  "chatgpt": [
+    "chatgpt"
+  ],
+  "ci-cd": [
+    "cd",
+    "ci",
+    "ci-cd"
+  ],
+  "cli": [
+    "cli",
+    "command-line",
+    "shell",
+    "terminal"
+  ],
+  "cloud": [
+    "cloud"
+  ],
+  "combinatorics": [
+    "combinatorics"
+  ],
+  "compilers": [
+    "compilers"
+  ],
+  "computer-architecture": [
+    "architecture",
+    "computer",
+    "computer-architecture"
+  ],
+  "course-project": [
+    "course",
+    "course-project",
+    "project"
+  ],
   "coursera": [
-    "course",
-    "learning",
-    "online-education"
+    "coursera"
   ],
-  "udacity": [
-    "nanodegree",
-    "learning",
-    "online-course"
-  ],
-  "datacamp": [
-    "course",
-    "python",
-    "data-science"
-  ],
-  "ipnd": [
-    "intro-to-programming",
-    "html",
-    "learning"
-  ],
-  "oms": [
-    "oms",
-    "graduate-program",
-    "georgia-tech"
-  ],
-  "datasci": [
-    "data-science",
-    "machine-learning",
-    "python"
-  ],
-  "pandas": [
-    "data-manipulation",
-    "dataframe",
-    "pandas"
-  ],
-  "scikit": [
-    "machine-learning",
-    "scikit-learn",
-    "ml"
-  ],
-  "kaggle": [
-    "datasets",
-    "competitions",
-    "kaggle"
-  ],
-  "jupyter": [
-    "jupyter-notebook",
-    "exploratory-data-analysis",
-    "python"
-  ],
-  "notebook": [
-    "notebooks",
-    "python",
-    "analysis"
-  ],
-  "honeypot": [
-    "honeypot",
-    "cybersecurity",
-    "network-security"
-  ],
-  "malware": [
-    "malware-analysis",
-    "reverse-engineering",
-    "security"
-  ],
-  "csci4349": [
-    "cybersecurity",
-    "network",
-    "college-project"
-  ],
-  "ctf": [
-    "capture-the-flag",
-    "ctf-challenges",
-    "infosec"
-  ],
-  "threat": [
-    "threat-detection",
-    "threat-intelligence",
-    "blue-team"
-  ],
-  "html": [
-    "html",
-    "webdev",
-    "frontend"
-  ],
-  "flask": [
-    "flask",
-    "webapp",
-    "python"
+  "cron": [
+    "cron"
   ],
   "css": [
     "css",
-    "styling",
-    "frontend"
+    "design",
+    "layout",
+    "styles"
   ],
-  "vagrant": [
-    "vagrant",
-    "devops",
-    "virtualization"
+  "ctf": [
+    "ctf"
   ],
-  "bootstrap": [
-    "bootstrap",
-    "ui",
-    "web-design"
+  "cybersecurity": [
+    "cybersecurity",
+    "infosec",
+    "network-security",
+    "security"
   ],
-  "script": [
-    "automation",
-    "scripts",
-    "cli-tools"
+  "data-cleaning": [
+    "cleaning",
+    "data",
+    "data-cleaning"
   ],
-  "scraper": [
-    "scraping",
-    "automation",
-    "requests"
+  "data-science": [
+    "data",
+    "data-science",
+    "dataanalysis",
+    "datasci",
+    "ds",
+    "science"
   ],
-  "fasclass": [
-    "scraper",
-    "us-government",
-    "automation"
+  "data-structures": [
+    "data",
+    "data-structures",
+    "structures"
   ],
-  "anki": [
-    "anki",
-    "flashcards",
-    "spaced-repetition",
-    "study"
+  "data-visualization": [
+    "data",
+    "data-visualization",
+    "visualization"
   ],
-  "calculus": [
-    "anki",
-    "calculus",
+  "databases": [
+    "databases"
+  ],
+  "datacamp": [
+    "datacamp"
+  ],
+  "deep-learning": [
+    "cnn",
+    "deep",
+    "deep-learning",
+    "dl",
+    "learning",
+    "neuralnet",
+    "rnn"
+  ],
+  "discrete-math": [
+    "discrete",
+    "discrete-math",
     "math"
   ],
-  "linear": [
-    "linear-algebra",
-    "math",
-    "anki"
+  "distributed-systems": [
+    "distributed",
+    "distributed-systems",
+    "systems"
   ],
-  "algorithm": [
-    "algorithms",
-    "complexity",
-    "cs-theory"
+  "django": [
+    "django"
   ],
-  "open-source": [
-    "open-source",
-    "education",
-    "free-courses"
+  "docker": [
+    "container",
+    "docker",
+    "dockerfile",
+    "image"
   ],
-  "degree": [
-    "curriculum",
-    "education",
-    "structured-learning"
+  "documentation": [
+    "documentation"
   ],
-  "cybersecurity-degree": [
-    "cybersecurity",
-    "education",
-    "career-path"
+  "edx": [
+    "edx"
   ],
-  "data-science-degree": [
-    "data-science",
-    "education",
-    "open-source"
+  "encryption": [
+    "encryption"
   ],
-  "dod": [
-    "dod",
-    "defense",
-    "us-government"
+  "exploratory-data-analysis": [
+    "analysis",
+    "data",
+    "exploratory",
+    "exploratory-data-analysis"
   ],
-  "army": [
-    "army",
-    "us-government",
-    "public-sector"
+  "express": [
+    "express"
+  ],
+  "firewall": [
+    "firewall"
+  ],
+  "flashcards": [
+    "flashcards"
+  ],
+  "flask": [
+    "backend",
+    "flask",
+    "microservice",
+    "webapp"
+  ],
+  "freecodecamp": [
+    "freecodecamp"
+  ],
+  "frontend": [
+    "frontend"
+  ],
+  "fullstack": [
+    "fullstack"
+  ],
+  "gcp": [
+    "gcp"
+  ],
+  "generative-ai": [
+    "ai",
+    "generative",
+    "generative-ai"
+  ],
+  "git": [
+    "git",
+    "github",
+    "repository",
+    "version-control"
+  ],
+  "github": [
+    "github"
+  ],
+  "go": [
+    "go"
+  ],
+  "graphql": [
+    "graphql"
+  ],
+  "html": [
+    "html",
+    "markup",
+    "web"
+  ],
+  "infosec": [
+    "infosec"
+  ],
+  "java": [
+    "java"
+  ],
+  "javascript": [
+    "frontend",
+    "javascript",
+    "js",
+    "node"
+  ],
+  "jenkins": [
+    "jenkins"
+  ],
+  "khan-academy": [
+    "academy",
+    "khan",
+    "khan-academy"
+  ],
+  "kubernetes": [
+    "kubernetes"
+  ],
+  "lightgbm": [
+    "lightgbm"
+  ],
+  "linear-algebra": [
+    "algebra",
+    "linear",
+    "linear-algebra"
+  ],
+  "llm": [
+    "llm"
+  ],
+  "logging": [
+    "logging"
+  ],
+  "logic": [
+    "logic"
+  ],
+  "machine-learning": [
+    "learning",
+    "machine",
+    "machine-learning",
+    "ml",
+    "model",
+    "supervised",
+    "unsupervised"
+  ],
+  "malware-analysis": [
+    "analysis",
+    "malware",
+    "malware-analysis"
+  ],
+  "markdown": [
+    "markdown"
+  ],
+  "math": [
+    "math"
+  ],
+  "matplotlib": [
+    "matplotlib"
+  ],
+  "mooc": [
+    "mooc"
+  ],
+  "nanodegree": [
+    "nanodegree"
+  ],
+  "networking": [
+    "networking"
+  ],
+  "nlp": [
+    "nlp"
+  ],
+  "nodejs": [
+    "nodejs"
+  ],
+  "notes": [
+    "notes"
+  ],
+  "notion": [
+    "notion"
+  ],
+  "numpy": [
+    "numpy"
+  ],
+  "obsidian": [
+    "obsidian"
   ],
   "omscs": [
-    "omscs",
-    "georgia-tech",
-    "online-master",
-    "cs-education"
+    "omscs"
   ],
-  "cs6603": [
-    "omscs",
-    "georgia-tech",
-    "ethics",
-    "ai",
-    "cs6603"
+  "open-source": [
+    "open",
+    "open-source",
+    "source"
   ],
-  "cs7637": [
-    "omscs",
-    "georgia-tech",
-    "ai",
-    "knowledge-based-ai",
-    "cs7637"
+  "openai": [
+    "api",
+    "chatgpt",
+    "gpt",
+    "llm",
+    "openai"
   ],
-  "cs7641": [
-    "omscs",
-    "georgia-tech",
-    "machine-learning",
-    "cs7641"
+  "operating-systems": [
+    "operating",
+    "operating-systems",
+    "systems"
   ],
-  "cs7646": [
-    "omscs",
-    "georgia-tech",
-    "quantitative-investing",
-    "ml4t",
-    "cs7646"
+  "os": [
+    "os"
   ],
-  "cs6250": [
-    "omscs",
-    "georgia-tech",
-    "computer-networks",
-    "cs6250"
+  "pandas": [
+    "data-wrangling",
+    "dataframe",
+    "pandas"
   ],
-  "cs8803": [
-    "omscs",
-    "georgia-tech",
-    "special-topics",
-    "cs8803"
+  "pentest": [
+    "pentest"
   ],
-  "cs6200": [
-    "omscs",
-    "georgia-tech",
-    "information-retrieval",
-    "cs6200"
+  "personal-site": [
+    "personal",
+    "personal-site",
+    "site"
   ],
-  "cs6475": [
-    "omscs",
-    "georgia-tech",
-    "computational-photography",
-    "cs6475"
+  "portfolio": [
+    "portfolio"
   ],
-  "cs6035": [
-    "omscs",
-    "georgia-tech",
-    "cybersecurity",
-    "cs6035"
+  "probability": [
+    "probability"
+  ],
+  "python": [
+    "py",
+    "python",
+    "python3"
+  ],
+  "r": [
+    "r"
+  ],
+  "react": [
+    "components",
+    "jsx",
+    "react",
+    "reactjs"
+  ],
+  "red-team": [
+    "red",
+    "red-team",
+    "team"
+  ],
+  "reinforcement-learning": [
+    "learning",
+    "reinforcement",
+    "reinforcement-learning"
+  ],
+  "research": [
+    "research"
+  ],
+  "resume": [
+    "resume"
+  ],
+  "reverse-engineering": [
+    "engineering",
+    "reverse",
+    "reverse-engineering"
+  ],
+  "rust": [
+    "rust"
+  ],
+  "school-project": [
+    "project",
+    "school",
+    "school-project"
+  ],
+  "scikit-learn": [
+    "learn",
+    "scikit",
+    "scikit-learn"
+  ],
+  "scripting": [
+    "scripting"
+  ],
+  "seaborn": [
+    "seaborn"
+  ],
+  "shell": [
+    "shell"
+  ],
+  "siem": [
+    "siem"
+  ],
+  "sql": [
+    "sql"
+  ],
+  "statistics": [
+    "statistics"
+  ],
+  "study-tools": [
+    "study",
+    "study-tools",
+    "tools"
+  ],
+  "terminal": [
+    "terminal"
+  ],
+  "terraform": [
+    "terraform"
+  ],
+  "thesis": [
+    "thesis"
+  ],
+  "threat-intelligence": [
+    "intelligence",
+    "threat",
+    "threat-intelligence"
+  ],
+  "transformer": [
+    "transformer"
+  ],
+  "tutorial": [
+    "tutorial"
+  ],
+  "typescript": [
+    "typescript"
+  ],
+  "udacity": [
+    "udacity"
+  ],
+  "ui": [
+    "ui"
+  ],
+  "ux": [
+    "ux"
+  ],
+  "vagrant": [
+    "vagrant"
+  ],
+  "virtualization": [
+    "virtualization"
+  ],
+  "vue": [
+    "vue"
+  ],
+  "webdev": [
+    "webdev"
+  ],
+  "xgboost": [
+    "xgboost"
   ]
 }

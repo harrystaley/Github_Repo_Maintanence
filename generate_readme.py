@@ -1,7 +1,9 @@
+
 import os
 import json
+import re
+import openai
 from github import Github
-from openai import OpenAI
 from dotenv import load_dotenv
 
 # --- Load Environment Variables ---
@@ -28,14 +30,23 @@ except FileNotFoundError:
 # --- GitHub and OpenAI Clients ---
 g = Github(GITHUB_TOKEN)
 user = g.get_user()
-openai = OpenAI(api_key=OPENAI_API_KEY)
+openai.api_key = OPENAI_API_KEY
 
 print(f"\n🔍 Logged in as: {user.login}")
 
-# --- Helper: Generate README Content ---
 def generate_readme(repo_name, description, topics):
-    prompt = f"""
-You are a helpful assistant who writes high-quality GitHub README.md files.
+    """
+    Generates a professional README.md file content using OpenAI's Chat API.
+
+    Parameters:
+        repo_name (str): The name of the GitHub repository.
+        description (str): A brief description of the repository.
+        topics (list): A list of relevant topics or tags for the repository.
+
+    Returns:
+        str: The generated README content in Markdown format.
+    """
+    prompt = f"""You are a helpful assistant who writes high-quality GitHub README.md files.
 
 Repo Name: {repo_name}
 Description: {description}
@@ -43,13 +54,13 @@ Topics: {', '.join(topics)}
 
 Generate a professional README.md that includes:
 1. A brief project overview.
-2. Setup or installation instructions if applicable.
+2. Setup or installation instructions if applicable including dependencies.
 3. Usage examples.
 4. Contribution guidelines.
 5. License section.
-"""
+""".strip()
 
-    response = openai.chat.completions.create(
+    response = openai.ChatCompletion.create(
         model="gpt-40",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.5,
@@ -59,12 +70,16 @@ Generate a professional README.md that includes:
 
 # --- Main Loop ---
 for repo in user.get_repos():
+    if repo.archived or repo.fork or repo.private:
+        print(f"🚫 Skipping '{repo.name}' (archived, forked, or private)")
+        continue
+
     name = repo.name.lower()
     desc = (repo.description or "").lower()
     matched_topics = set()
 
     for keyword, topics in TOPIC_RULES.items():
-        if keyword in name or keyword in desc:
+        if re.search(rf"\b{re.escape(keyword)}\b", name, re.IGNORECASE) or re.search(rf"\b{re.escape(keyword)}\b", desc, re.IGNORECASE):
             matched_topics.update(topics)
 
     if matched_topics:
@@ -76,7 +91,6 @@ for repo in user.get_repos():
     else:
         print(f"❌ Skipped '{repo.name}': No topic rules matched.")
 
-    # Check for README
     try:
         repo.get_readme()
         print(f"✅ README exists for '{repo.name}'")
