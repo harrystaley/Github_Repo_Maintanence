@@ -1,5 +1,5 @@
 import os
-import openai
+from openai import OpenAI
 from github import Github
 from dotenv import load_dotenv
 import difflib
@@ -8,11 +8,21 @@ import traceback
 # Load environment variables
 load_dotenv()
 
+# --- GitHub and OpenAI Auth ---
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+if not GITHUB_TOKEN:
+    raise ValueError("GITHUB_TOKEN not set in environment variables.")
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY not set in environment variables.")
+
+
 # Set up OpenAI key (no proxies, no extras)
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 # GitHub authentication
-g = Github(os.getenv("GITHUB_TOKEN"))
+g = Github(login_or_token=GITHUB_TOKEN)
 user = g.get_user()
 
 # Generate a new GitHub description based on the repo name, topics, and readme

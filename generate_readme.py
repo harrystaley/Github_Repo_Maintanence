@@ -2,7 +2,8 @@
 import os
 import json
 import re
-import openai
+from openai import OpenAI
+
 from github import Github
 from dotenv import load_dotenv
 
@@ -21,7 +22,7 @@ if not OPENAI_API_KEY:
 # --- GitHub and OpenAI Clients ---
 g = Github(GITHUB_TOKEN)
 user = g.get_user()
-openai.api_key = OPENAI_API_KEY
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 print(f"\n🔍 Logged in as: {user.login}")
 
@@ -51,12 +52,10 @@ Generate a professional README.md that includes:
 5. License section.
 """.strip()
 
-    response = openai.ChatCompletion.create(
-        model="gpt-40",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.5,
-        max_tokens=1000
-    )
+    response = client.chat.completions.create(model="gpt-4",
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0.5,
+    max_tokens=1000)
     return response.choices[0].message.content.strip()
 
 def should_update_readme(existing, new):
