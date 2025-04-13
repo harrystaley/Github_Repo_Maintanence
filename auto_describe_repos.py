@@ -11,6 +11,8 @@ load_dotenv()
 # --- GitHub and OpenAI Auth ---
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4-turbo")
+
 
 if not GITHUB_TOKEN:
     raise ValueError("GITHUB_TOKEN not set in environment variables.")
@@ -34,8 +36,8 @@ README (first 1000 characters): {readme[:1000]}
 
 Write a 1–2 sentence summary of this repo for the GitHub description field:"""
 
-    response = openai.chat.completions.create(
-        model="gpt-4o",
+    response = client.chat.completions.create(
+        model=OPENAI_MODEL,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.5,
         max_tokens=100

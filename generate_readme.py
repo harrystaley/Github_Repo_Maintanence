@@ -3,7 +3,6 @@ import os
 import json
 import re
 from openai import OpenAI
-
 from github import Github
 from dotenv import load_dotenv
 
@@ -13,6 +12,7 @@ load_dotenv()
 # --- GitHub and OpenAI Auth ---
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4-turbo")
 
 if not GITHUB_TOKEN:
     raise ValueError("GITHUB_TOKEN not set in environment variables.")
@@ -45,17 +45,19 @@ Description: {description}
 Topics: {', '.join(topics)}
 
 Generate a professional README.md that includes:
-1. A brief project overview.
+1. A brief project overview including project structure if applicable.
 2. Setup or installation instructions if applicable including dependencies.
 3. Usage examples.
-4. Contribution guidelines.
-5. License section.
+4. Contribution guidelines if applicable.
+5. License section if applicable.
 """.strip()
 
-    response = client.chat.completions.create(model="gpt-4",
-    messages=[{"role": "user", "content": prompt}],
-    temperature=0.5,
-    max_tokens=1000)
+    response = client.chat.completions.create(
+        model=OPENAI_MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.5,
+        max_tokens=1000
+    )
     return response.choices[0].message.content.strip()
 
 def should_update_readme(existing, new):
@@ -73,14 +75,36 @@ def should_update_readme(existing, new):
 
 import argparse
 
+def get_excluded_repos():
+    """
+    Builds a set of repositories to exclude from processing.
+    """
+
+    excluded = []
+    for repo in user.get_repos():
+        contents = repo.get_contents("")
+        file_names = {content.name for content in contents if content.type == "file"}
+        placeholder_files = {"README.md", ".gitignore", "LICENSE", ".gitattributes"}
+        if file_names.issubset(placeholder_files):
+            excluded.append(repo.name)
+
+        if repo.archived or repo.fork or repo.name.endswith(".github.io") or repo.name == user.name:
+            excluded.append(repo.name)
+    print(f"🚫 Excluding {len(excluded)} repos: {', '.join(excluded)}")
+    return excluded
+
 def main():
     parser = argparse.ArgumentParser(description="Update READMEs with ChatGPT")
     parser.add_argument("--dry-run", action="store_true", help="Show changes without writing to GitHub")
     args = parser.parse_args()
 
+    user = g.get_user()
+    excluded = get_excluded_repos()
+
+
     for repo in user.get_repos():
-        if repo.archived or repo.fork or repo.name.endswith(".github.io"):
-            print(f"🚫 Skipping '{repo.name}' (archived, forked, or private)")
+        if repo.name in excluded:
+            print(f"🚫 Skipping '{repo.name}' (archived, forked, private, personal page, or githup pages repo)")
             continue
 
         try:

@@ -17,10 +17,22 @@ Github_Repo_Maintanence is a powerful tool built to automate the maintenance of 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/username/Github_Repo_Maintanence.git
+pip install -r requirements.txt
 ```
 
-2. Navigate to the project directory
+**Required Packages:**
+
+```
+PyGithub==1.59.0
+openai==1.10.0
+python-dotenv==1.0.1
+```
+
+---
+
+## 🔐 Setup
+
+1. **Clone this repo**:
 
 ```bash
 cd Github_Repo_Maintanence
