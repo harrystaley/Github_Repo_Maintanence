@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-if not GITHUB_TOKEN:
-    raise ValueError("❌ GITHUB_TOKEN not set in environment variables.")
+GH_TOKEN = os.getenv("GH_TOKEN")
+if not GH_TOKEN:
+    raise ValueError("❌ GH_TOKEN not set in environment variables.")
 
 # Load topic rules
 TOPIC_RULES_PATH = "topic_rules.json"
@@ -20,7 +20,7 @@ except FileNotFoundError:
     exit(1)
 
 # Authenticate with GitHub
-g = Github(GITHUB_TOKEN)
+g = Github(GH_TOKEN)
 user = g.get_user()
 print(f"\n🔍 Logged in as: {user.login}")
 

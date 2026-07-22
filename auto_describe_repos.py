@@ -9,13 +9,13 @@ import traceback
 load_dotenv()
 
 # --- GitHub and OpenAI Auth ---
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
+GH_TOKEN = os.getenv("GH_TOKEN")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4-turbo")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 
 
-if not GITHUB_TOKEN:
-    raise ValueError("GITHUB_TOKEN not set in environment variables.")
+if not GH_TOKEN:
+    raise ValueError("GH_TOKEN not set in environment variables.")
 if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY not set in environment variables.")
 
@@ -24,7 +24,7 @@ if not OPENAI_API_KEY:
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # GitHub authentication
-g = Github(login_or_token=GITHUB_TOKEN)
+g = Github(login_or_token=GH_TOKEN)
 user = g.get_user()
 
 # Generate a new GitHub description based on the repo name, topics, and readme
