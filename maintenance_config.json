@@ -1,0 +1,29 @@
+{
+  "excluded_repos": [
+    ".github.io",
+    "Github_Repo_Maintanence"
+  ],
+  "readme_generation": {
+    "enabled": true,
+    "create_if_missing": true,
+    "update_existing": true,
+    "skip_placeholder_repos": true,
+    "max_tokens": 1500
+  },
+  "description_generation": {
+    "enabled": true,
+    "update_existing": true,
+    "skip_if_similar": true,
+    "similarity_threshold": 0.8,
+    "max_tokens": 100
+  },
+  "topics_auto_assignment": {
+    "enabled": true,
+    "skip_if_topics_exist": false
+  },
+  "safety": {
+    "dry_run_by_default": true,
+    "require_confirmation": true,
+    "verbose_logging": true
+  }
+}
