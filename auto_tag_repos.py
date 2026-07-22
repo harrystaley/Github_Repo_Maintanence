@@ -5,9 +5,9 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-GH_TOKEN = os.getenv("GH_TOKEN")
+GH_TOKEN = os.getenv("GH_TOKEN") or os.getenv("GITHUB_TOKEN")
 if not GH_TOKEN:
-    raise ValueError("❌ GH_TOKEN not set in environment variables.")
+    raise ValueError("❌ GH_TOKEN or GITHUB_TOKEN not set in environment variables.")
 
 # Load topic rules
 TOPIC_RULES_PATH = "topic_rules.json"
